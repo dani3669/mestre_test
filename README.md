@@ -13,9 +13,9 @@ python3 -m http.server 8000
 
 ## Estructura
 
-- `index.html`: secciones (inicio, nosotros, servicios, galería, artistas, precios, opiniones, contacto)
+- `index.html`: secciones (portada, marcas, estudio y precios, opiniones, FAQ, newsletter y pie)
 - `css/styles.css`: estilos y colores (variables en `:root`)
-- `js/main.js`: menú móvil y formulario de contacto
+- `js/main.js`: menú móvil, carrusel de opiniones y newsletter
 
 ## Imágenes pendientes
 
