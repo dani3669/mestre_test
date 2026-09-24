@@ -373,6 +373,8 @@ h1, h2, .price, .hero-card strong, .quote cite {
   .logo-item { font-size: 18px; }
   .bento-section { padding: 70px 0; }
   .bento, .tile-col { grid-template-columns: 1fr; }
+  .tile-col { grid-template-rows: auto; }
+  .tile-art, .tile-photo { min-height: 242px; }
   .tile-process { grid-column: auto; }
   .tile h2, .section-title, .newsletter h2 { font-size: 38px; }
   .avatars { gap: 10px; }
