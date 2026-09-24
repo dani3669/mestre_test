@@ -5,223 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mestre Tattoo Studio</title>
   <meta name="description" content="Estudio de tatuajes: diseños personalizados, artistas con experiencia y un espacio seguro e higiénico.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-star" viewBox="0 0 42 42"><path d="M21 0c1.6 11 9 18.4 21 21-12 2.6-19.4 10-21 21-1.6-11-9-18.4-21-21C12 18.4 19.4 11 21 0Z"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 10 10"><path d="M5 0 10 5 5 10 0 5Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 3v14M3 10h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M18 24h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="logo">MESTRE<span>.</span></a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="nav" class="nav">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#artistas">Artistas</a>
-        <a href="#precios">Precios</a>
-        <a href="#contacto" class="btn btn-small">Reservar cita</a>
+    <div class="container">
+      <nav class="nav" aria-label="Principal">
+        <div class="nav-group">
+          <a href="#inicio">Inicio</a>
+          <a href="#estudio">Portfolio</a>
+          <a href="#opiniones">Nosotros</a>
+        </div>
+        <a href="#inicio" class="nav-logo" aria-label="Mestre Tattoo Studio">
+          <svg><use href="#i-star"/></svg>
+        </a>
+        <div class="nav-group">
+          <a href="#contacto">Contacto</a>
+          <a href="#estudio">Precios</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
+      <div id="mobile-nav" class="mobile-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#estudio">Portfolio</a>
+        <a href="#opiniones">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#estudio">Precios</a>
+        <a href="#faq">FAQ</a>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section id="inicio" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="eyebrow">Estudio de tatuajes</p>
-          <h1>Tu historia,<br>grabada en <span class="accent">tinta</span></h1>
-          <p class="lead">Diseños únicos creados a tu medida por artistas con más de 10 años de experiencia. Arte que te acompaña para siempre.</p>
-          <div class="hero-actions">
-            <a href="#contacto" class="btn">Reservar cita</a>
-            <a href="#galeria" class="btn btn-outline">Ver trabajos</a>
+          <h1>Tatuajes que <span class="accent">desafían</span> tu alma</h1>
+          <a href="#contacto" class="btn-book">
+            <svg class="dia"><use href="#i-diamond"/></svg>
+            <span>Reserva tu cita</span>
+            <svg class="dia"><use href="#i-diamond"/></svg>
+          </a>
+          <div class="hours">
+            <span class="hours-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <dl>
+              <dt>Lun-Vie</dt><dd>11:00-21:00</dd>
+              <dt>Sáb-Dom</dt><dd>14:00-20:00</dd>
+            </dl>
           </div>
-          <ul class="stats">
-            <li><strong>10+</strong><span>Años de experiencia</span></li>
-            <li><strong>5K+</strong><span>Tatuajes realizados</span></li>
-            <li><strong>4.9</strong><span>Valoración media</span></li>
-          </ul>
         </div>
-        <div class="hero-image" role="img" aria-label="Artista tatuando"></div>
-      </div>
-    </section>
 
-    <section id="nosotros" class="section about">
-      <div class="container two-col">
-        <div class="about-image" role="img" aria-label="Interior del estudio"></div>
-        <div>
-          <p class="eyebrow">Sobre nosotros</p>
-          <h2>Arte, higiene y confianza</h2>
-          <p>En Mestre cada tatuaje empieza con una conversación. Escuchamos tu idea, la convertimos en un diseño original y lo ejecutamos con material esterilizado de un solo uso en un espacio cómodo y seguro.</p>
-          <ul class="checklist">
-            <li>Diseños 100% personalizados</li>
-            <li>Material estéril y de un solo uso</li>
-            <li>Tintas veganas de alta calidad</li>
-            <li>Seguimiento y cuidados posteriores</li>
-          </ul>
+        <div class="hero-visual">
+          <svg class="hero-blob" viewBox="0 0 520 531" aria-hidden="true">
+            <path d="M120 0h380a20 20 0 0 1 20 20v70a20 20 0 0 1-20 20H340v421H250V300h-40v231a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20V380a20 20 0 0 0-40 0v131a20 20 0 0 1-20 20H20a20 20 0 0 1-20-20V80a20 20 0 0 1 20-20h40c20 0 30-10 40-30L110 10C114 4 118 0 120 0Z"/>
+          </svg>
+          <img class="hero-girl" src="img/girl.png" alt="Mujer con tatuajes y rastas" onerror="this.remove()">
+          <div class="hero-card">
+            <span class="hero-card-line" aria-hidden="true"></span>
+            <div><small>Tiempo</small><strong>2 semanas</strong></div>
+            <div><small>Precio</small><strong><sup>€</sup> 2400.00</strong></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="servicios" class="section services">
+    <!-- Logos -->
+    <section class="logos" aria-label="Marcas con las que trabajamos">
+      <div class="container logos-inner">
+        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M4 7l10-4 6 4v10l-10 4-6-4Z"/></svg>Layers</span>
+        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M13 1 5 14h6l-1 9 8-13h-6Z"/></svg>Sisyphus</span>
+        <span class="logo-item"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>Circooles</span>
+        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 8.7 15l-4.4-2.5A5 5 0 1 1 16.3 9.5l4.4-2.5A10 10 0 0 0 12 2Z"/></svg>Catalog</span>
+        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 5.6 18.3L20 23l3-3-2.4-2.4A10 10 0 0 0 12 2Zm0 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>Quotient</span>
+      </div>
+    </section>
+
+    <!-- Bento -->
+    <section id="estudio" class="bento-section">
+      <div class="container bento">
+        <article class="tile tile-dark tile-process">
+          <h2>Un proceso a medida que te hará gritar… ¡y luego sonreír!</h2>
+          <div class="process-photo">
+            <img src="img/tatoo-artist.png" alt="Tatuador del estudio" onerror="this.remove()">
+          </div>
+        </article>
+
+        <div class="tile-col">
+          <article class="tile tile-cream tile-art">
+            <img src="img/gorilla.svg" alt="Diseño de gorila con sombrero" onerror="this.remove()">
+            <p class="price"><sup>€</sup> 2800.00</p>
+          </article>
+          <article class="tile tile-cream tile-art tile-art-tall">
+            <img src="img/skull.svg" alt="Diseño de calavera" onerror="this.remove()">
+            <p class="price"><sup>€</sup> 1500.00</p>
+          </article>
+        </div>
+
+        <div class="tile-col">
+          <article class="tile tile-photo">
+            <img src="img/man-doing-tattoo.png" alt="Tatuador trabajando" onerror="this.remove()">
+          </article>
+          <article class="tile tile-dark tile-rated">
+            <h2>El estudio de tatuajes mejor valorado de la ciudad.</h2>
+            <p>No lo dudes. ¡Nadie se ha arrepentido nunca de sus tatuajes! Escríbenos y te ayudamos.</p>
+            <a href="#contacto" class="btn">Contacta ahora</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="opiniones" class="testimonials">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Servicios</p>
-          <h2>Lo que hacemos</h2>
+        <h2 class="section-title">¿Qué dicen los clientes?!</h2>
+        <div class="avatars" aria-hidden="true">
+          <span class="avatar sm a1"></span>
+          <span class="avatar md a2"></span>
+          <span class="avatar lg a3"></span>
+          <span class="avatar md a4"></span>
+          <span class="avatar sm a5"></span>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon">✒</div>
-            <h3>Tatuajes a medida</h3>
-            <p>Desde fine line hasta realismo: creamos una pieza única para ti.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">◐</div>
-            <h3>Cover-ups</h3>
-            <p>Transformamos tatuajes antiguos en algo nuevo que te encante.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">◎</div>
-            <h3>Piercing</h3>
-            <p>Perforaciones profesionales con joyería de titanio implantológico.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">✦</div>
-            <h3>Retoques</h3>
-            <p>Devolvemos la intensidad y definición a tus tatuajes.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria" class="section gallery">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Galería</p>
-          <h2>Trabajos recientes</h2>
-        </div>
-        <div class="gallery-grid">
-          <figure class="g-item g-1"><figcaption>Blackwork</figcaption></figure>
-          <figure class="g-item g-2"><figcaption>Realismo</figcaption></figure>
-          <figure class="g-item g-3"><figcaption>Fine line</figcaption></figure>
-          <figure class="g-item g-4"><figcaption>Tradicional</figcaption></figure>
-          <figure class="g-item g-5"><figcaption>Acuarela</figcaption></figure>
-          <figure class="g-item g-6"><figcaption>Geométrico</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="artistas" class="section artists">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Equipo</p>
-          <h2>Nuestros artistas</h2>
-        </div>
-        <div class="artist-grid">
-          <article class="artist">
-            <div class="artist-photo a-1"></div>
-            <h3>Carlos Mestre</h3>
-            <p>Realismo y black &amp; grey</p>
-          </article>
-          <article class="artist">
-            <div class="artist-photo a-2"></div>
-            <h3>Lucía Ramos</h3>
-            <p>Fine line y botánico</p>
-          </article>
-          <article class="artist">
-            <div class="artist-photo a-3"></div>
-            <h3>Andrés Vidal</h3>
-            <p>Tradicional y neotradicional</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="precios" class="section pricing">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Precios</p>
-          <h2>Tarifas orientativas</h2>
-        </div>
-        <div class="price-grid">
-          <article class="price-card">
-            <h3>Pequeño</h3>
-            <p class="price">desde 60 €</p>
-            <p>Hasta 5 cm. Ideal para minimalistas, letras y símbolos.</p>
-          </article>
-          <article class="price-card featured">
-            <h3>Mediano</h3>
-            <p class="price">desde 150 €</p>
-            <p>Hasta 15 cm. Diseño personalizado incluido.</p>
-          </article>
-          <article class="price-card">
-            <h3>Sesión completa</h3>
-            <p class="price">desde 400 €</p>
-            <p>Piezas grandes, mangas y espalda. Por sesión de 6 h.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonials">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Opiniones</p>
-          <h2>Lo que dicen nuestros clientes</h2>
-        </div>
-        <div class="quotes">
-          <blockquote>
-            <p>“Entendieron exactamente lo que quería y el resultado superó mis expectativas.”</p>
-            <cite>Marta G.</cite>
+        <div class="quote-wrap">
+          <button class="quote-nav prev" aria-label="Opinión anterior"><svg><use href="#i-arrow"/></svg></button>
+          <blockquote class="quote">
+            <cite>Carolina Stones</cite>
+            <p>Hace poco tuve el placer de tatuarme en Mestre y no podría estar más contenta con toda la experiencia. De principio a fin, todo en este estudio superó mis expectativas.</p>
           </blockquote>
-          <blockquote>
-            <p>“Un estudio impecable y un trato cercano. Ya estoy pensando en el siguiente.”</p>
-            <cite>Javier L.</cite>
-          </blockquote>
-          <blockquote>
-            <p>“Me taparon un tatuaje antiguo y ahora es mi favorito.”</p>
-            <cite>Sara P.</cite>
-          </blockquote>
+          <button class="quote-nav next" aria-label="Opinión siguiente"><svg><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section contact">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Reserva tu cita</h2>
-          <p>Cuéntanos tu idea y te responderemos en menos de 24 horas con propuesta y presupuesto.</p>
-          <ul class="contact-info">
-            <li><strong>Dirección:</strong> Calle Mayor 12, Madrid</li>
-            <li><strong>Teléfono:</strong> +34 600 000 000</li>
-            <li><strong>Email:</strong> hola@mestretattoo.com</li>
-            <li><strong>Horario:</strong> Mar–Sáb, 11:00–20:00</li>
-          </ul>
-        </div>
-        <form class="contact-form" action="#" method="post">
-          <label>Nombre<input type="text" name="nombre" required></label>
-          <label>Email<input type="email" name="email" required></label>
-          <label>Cuéntanos tu idea<textarea name="mensaje" rows="4" required></textarea></label>
-          <button type="submit" class="btn">Enviar solicitud</button>
-          <p class="form-note" aria-live="polite"></p>
-        </form>
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container faq-inner">
+        <h2 class="section-title">F.A.Q.</h2>
+        <details>
+          <summary>¿Cómo es el proceso?<svg><use href="#i-plus"/></svg></summary>
+          <p>Nos cuentas tu idea, preparamos un boceto personalizado, lo ajustamos contigo y reservamos la sesión. Después te damos las pautas de cuidado.</p>
+        </details>
+        <details open>
+          <summary>¿Cómo calculáis el precio?<svg><use href="#i-plus"/></svg></summary>
+          <ol>
+            <li><b>Tamaño:</b> el precio suele depender del tamaño. Los tatuajes grandes cuestan más que los pequeños.</li>
+            <li><b>Complejidad:</b> los diseños más detallados requieren más tiempo y técnica, por lo que tienen un coste mayor.</li>
+            <li><b>Color:</b> los tatuajes a color suelen costar más que los de negro y gris, porque requieren más trabajo.</li>
+          </ol>
+        </details>
+        <details>
+          <summary>¿Podéis dibujar cualquier tatuaje?<svg><use href="#i-plus"/></svg></summary>
+          <p>Sí. Trabajamos todos los estilos: realismo, blackwork, fine line, tradicional y más.</p>
+        </details>
+        <details>
+          <summary>¿Dónde estáis?<svg><use href="#i-plus"/></svg></summary>
+          <p>Calle Mayor 12, Madrid. Abrimos de lunes a domingo.</p>
+        </details>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="#inicio" class="logo">MESTRE<span>.</span></a>
-      <nav class="social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="TikTok">TikTok</a>
-      </nav>
-      <p>© <span id="year"></span> Mestre Tattoo Studio</p>
+  <!-- Newsletter + footer -->
+  <footer id="contacto" class="site-footer">
+    <div class="container">
+      <div class="newsletter">
+        <svg class="dia"><use href="#i-diamond"/></svg>
+        <div class="newsletter-box">
+          <img class="newsletter-art" src="img/newsletter.svg" alt="" onerror="this.remove()">
+          <div>
+            <h2>Suscríbete a nuestra newsletter</h2>
+            <form class="newsletter-form">
+              <input type="email" name="email" placeholder="Tu email..." aria-label="Email" required>
+              <button type="submit" class="btn">Suscribirme</button>
+            </form>
+            <p class="form-note" aria-live="polite"></p>
+          </div>
+        </div>
+        <svg class="dia"><use href="#i-diamond"/></svg>
+      </div>
+
+      <div class="footer-top">
+        <svg class="footer-logo"><use href="#i-star"/></svg>
+        <div class="footer-links">
+          <nav><a href="#inicio">Inicio</a><a href="#estudio">Portfolio</a><a href="#opiniones">Nosotros</a></nav>
+          <nav><a href="#contacto">Contacto</a><a href="#estudio">Precios</a><a href="#faq">FAQ</a></nav>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><path fill="#1e1c17" d="M18 8.5c-.5.2-1 .4-1.5.4.6-.3 1-.9 1.2-1.5-.5.3-1.1.5-1.7.7a2.7 2.7 0 0 0-4.6 2.4 7.6 7.6 0 0 1-5.5-2.8 2.7 2.7 0 0 0 .8 3.6c-.4 0-.9-.1-1.2-.3 0 1.3.9 2.4 2.1 2.6-.4.1-.8.1-1.2 0a2.7 2.7 0 0 0 2.5 1.9A5.4 5.4 0 0 1 5 16.6a7.6 7.6 0 0 0 11.7-6.8c.5-.4 1-.8 1.3-1.3Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.5" fill="#1e1c17"/><circle cx="12" cy="12" r="2.8"/><circle cx="17.5" cy="6.5" r="1.3" fill="#1e1c17"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="5"/><path fill="#1e1c17" d="m10 8.5 6 3.5-6 3.5Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <p>© <span id="year"></span> Mestre Tattoo Studio. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 
