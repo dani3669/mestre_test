@@ -4,7 +4,7 @@ import { cp, mkdir, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
 const OUT = "dist";
-const ENTRIES = ["index.html", "css", "js", "images", "assets", "favicon.ico", "_headers", "_redirects"];
+const ENTRIES = ["index.html", "css", "js", "fonts", "img", "images", "assets", "favicon.ico", "_headers", "_redirects"];
 
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });

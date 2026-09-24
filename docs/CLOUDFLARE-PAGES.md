@@ -1,6 +1,6 @@
 # Cloudflare Pages
 
-El sitio es estático. `bun run build` copia `index.html`, `css/`, `js/`, `_headers` (y
+El sitio es estático. `bun run build` copia `index.html`, `css/`, `js/`, `fonts/`, `_headers` (y `img/`,
 `images/`, `assets/`, `_redirects` si existen) a `dist/`, que es lo que publica Pages.
 
 ## Crear el proyecto (una vez, desde el dashboard)
