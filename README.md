@@ -13,9 +13,15 @@ python3 -m http.server 8000
 
 ## Estructura
 
-- `index.html`: secciones (inicio, nosotros, servicios, galería, artistas, precios, opiniones, contacto)
+- `index.html`: secciones (portada, marcas, estudio y precios, opiniones, FAQ, newsletter y pie)
 - `css/styles.css`: estilos y colores (variables en `:root`)
-- `js/main.js`: menú móvil y formulario de contacto
+- `js/main.js`: menú móvil, carrusel de opiniones y newsletter
 
-Las imágenes son marcadores de posición con degradados; sustitúyelas por fotos reales
-añadiendo `background-image: url(...)` a `.hero-image`, `.g-*` y `.a-*`.
+## Imágenes pendientes
+
+Las fotos e ilustraciones del Figma van en `img/` con estos nombres (si faltan, la página
+se ve igual pero sin ellas): `girl.png` (portada), `tatoo-artist.png`, `gorilla.svg`,
+`skull.svg`, `man-doing-tattoo.png`, `newsletter.svg`.
+
+Tipografías: UnifrakturCook (incluida en `fonts/`) sustituye a *Angel Rhapsody*, que no es
+libre; el texto usa Satoshi desde Fontshare.
