@@ -1,0 +1,5 @@
+# Cloudflare Pages: sitio estático (HTML/CSS/JS) compilado con Bun a ./dist.
+# `bun run deploy` usa esta config para `wrangler pages deploy`.
+name = "mestre-test"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "./dist"
