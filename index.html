@@ -9,24 +9,20 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-star" viewBox="0 0 42 42"><path d="M21 0c1.6 11 9 18.4 21 21-12 2.6-19.4 10-21 21-1.6-11-9-18.4-21-21C12 18.4 19.4 11 21 0Z"/></symbol>
-    <symbol id="i-diamond" viewBox="0 0 10 10"><path d="M5 0 10 5 5 10 0 5Z"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 3v14M3 10h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M18 24h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  </svg>
+  <!-- Desktop: every .abs element is placed with the Figma frame coordinates
+       (--x/--y/--w/--h, in px of the 1150px-wide HOME PAGE frame) and scaled by --u.
+       Below 900px the page falls back to a stacked layout (see styles.css). -->
+  <div class="page">
 
-  <header class="site-header">
-    <div class="container">
+    <!-- Header -->
+    <header class="abs nav-bar" style="--x:119.75;--y:29.94;--w:910.12;--h:62.27">
       <nav class="nav" aria-label="Principal">
         <div class="nav-group">
           <a href="#inicio">Inicio</a>
           <a href="#estudio">Portfolio</a>
           <a href="#opiniones">Nosotros</a>
         </div>
-        <a href="#inicio" class="nav-logo" aria-label="Mestre Tattoo Studio">
-          <svg><use href="#i-star"/></svg>
-        </a>
+        <a href="#inicio" class="nav-logo" aria-label="Mestre Tattoo Studio"><img src="img/star-logo.svg" alt=""></a>
         <div class="nav-group">
           <a href="#contacto">Contacto</a>
           <a href="#estudio">Precios</a>
@@ -44,178 +40,170 @@
         <a href="#estudio">Precios</a>
         <a href="#faq">FAQ</a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
     <!-- Hero -->
     <section id="inicio" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Tatuajes que <span class="accent">desafían</span> tu alma</h1>
-          <a href="#contacto" class="btn-book">
-            <svg class="dia"><use href="#i-diamond"/></svg>
-            <span>Reserva tu cita</span>
-            <svg class="dia"><use href="#i-diamond"/></svg>
-          </a>
-          <div class="hours">
-            <span class="hours-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-            <dl>
-              <dt>Lun-Vie</dt><dd>11:00-21:00</dd>
-              <dt>Sáb-Dom</dt><dd>14:00-20:00</dd>
-            </dl>
-          </div>
-        </div>
+      <h1 class="abs hero-title" style="--x:119.75;--y:176.04;--w:300">Tatuajes que <span class="accent">Desafían</span> tu Alma</h1>
 
-        <div class="hero-visual">
-          <svg class="hero-blob" viewBox="0 0 520 531" aria-hidden="true">
-            <path d="M120 0h380a20 20 0 0 1 20 20v70a20 20 0 0 1-20 20H340v421H250V300h-40v231a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20V380a20 20 0 0 0-40 0v131a20 20 0 0 1-20 20H20a20 20 0 0 1-20-20V80a20 20 0 0 1 20-20h40c20 0 30-10 40-30L110 10C114 4 118 0 120 0Z"/>
-          </svg>
-          <img class="hero-girl" src="img/girl.png" alt="Mujer con tatuajes y rastas" onerror="this.remove()">
-          <div class="hero-card">
-            <span class="hero-card-line" aria-hidden="true"></span>
-            <div><small>Tiempo</small><strong>2 semanas</strong></div>
-            <div><small>Precio</small><strong><sup>€</sup> 2400.00</strong></div>
-          </div>
+      <a href="#contacto" class="abs btn-book" style="--x:119.75;--y:482.6;--w:216.8;--h:47.9">
+        <img class="dia" src="img/diamond.svg" alt="">
+        <span class="btn-book-body">
+          <img class="btn-book-bg" src="img/book-btn.svg" alt="">
+          <img class="btn-book-shade l" src="img/book-btn-l.svg" alt="">
+          <img class="btn-book-shade r" src="img/book-btn-r.svg" alt="">
+          <span class="btn-book-label">Reserva cita</span>
+        </span>
+        <img class="dia" src="img/diamond.svg" alt="">
+      </a>
+
+      <div class="abs hours" style="--x:119.75;--y:568.83">
+        <span class="hours-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <dl>
+          <dt>Lun-Vie</dt><dd>11:00-21:00</dd>
+          <dt>Sáb-Dom</dt><dd>14:00-20:00</dd>
+        </dl>
+      </div>
+
+      <div class="hero-visual">
+        <img class="abs hero-shape" style="--x:500.06;--y:126.94;--w:519.75;--h:531.1" src="img/hero-shape.svg" alt="">
+        <div class="abs hero-girl" style="--x:503.95;--y:127.54;--w:561.94;--h:609.54">
+          <img src="img/girl.webp" alt="Mujer con tatuajes en la cara y rastas" width="988" height="1024">
         </div>
+        <img class="abs hero-line" style="--x:854.44;--y:271.54;--w:87.12;--h:208.67" src="img/card-line.svg" alt="">
+        <span class="abs hero-dot" style="--x:852.05;--y:269.44;--w:4.19;--h:4.19"></span>
+        <div class="abs hero-card" style="--x:846.65;--y:480.21;--h:81.43">
+          <div><small>Tiempo</small><strong>2 semanas</strong></div>
+          <div><small>Precio</small><strong><sup>€</sup> 2400.00</strong></div>
+        </div>
+        <img class="abs hero-pointer" style="--x:996.65;--y:561.64;--w:11.98;--h:13.77" src="img/card-pointer.svg" alt="">
       </div>
     </section>
 
     <!-- Logos -->
-    <section class="logos" aria-label="Marcas con las que trabajamos">
-      <div class="container logos-inner">
-        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M4 7l10-4 6 4v10l-10 4-6-4Z"/></svg>Layers</span>
-        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M13 1 5 14h6l-1 9 8-13h-6Z"/></svg>Sisyphus</span>
-        <span class="logo-item"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>Circooles</span>
-        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 8.7 15l-4.4-2.5A5 5 0 1 1 16.3 9.5l4.4-2.5A10 10 0 0 0 12 2Z"/></svg>Catalog</span>
-        <span class="logo-item"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 5.6 18.3L20 23l3-3-2.4-2.4A10 10 0 0 0 12 2Zm0 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>Quotient</span>
+    <section class="abs logos" style="--x:0;--y:737.08;--w:1149.63;--h:83.83" aria-label="Marcas con las que trabajamos">
+      <div class="logos-row">
+        <img src="img/logo-1.svg" alt="Layers" style="--w:87.42">
+        <img src="img/logo-2.svg" alt="Sisyphus" style="--w:101.19">
+        <img src="img/logo-3.svg" alt="Circooles" style="--w:109.57">
+        <img src="img/logo-4.svg" alt="Catalog" style="--w:95.8">
+        <img src="img/logo-5.svg" alt="Quotient" style="--w:111.97">
       </div>
     </section>
 
     <!-- Bento -->
-    <section id="estudio" class="bento-section">
-      <div class="container bento">
-        <article class="tile tile-dark tile-process">
-          <h2>Un proceso a medida que te hará gritar… ¡y luego sonreír!</h2>
-          <div class="process-photo">
-            <img src="img/tatoo-artist.png" alt="Tatuador del estudio" onerror="this.remove()">
-          </div>
-        </article>
+    <section id="estudio" class="bento">
+      <img class="abs bento-bg" style="--x:119.75;--y:916.71;--w:910.12;--h:479.01" src="img/bento-bg.svg" alt="">
 
-        <div class="tile-col">
-          <article class="tile tile-cream tile-art">
-            <img src="img/gorilla.svg" alt="Diseño de gorila con sombrero" onerror="this.remove()">
-            <p class="price"><sup>€</sup> 2800.00</p>
-          </article>
-          <article class="tile tile-cream tile-art tile-art-tall">
-            <img src="img/skull.svg" alt="Diseño de calavera" onerror="this.remove()">
-            <p class="price"><sup>€</sup> 1500.00</p>
-          </article>
+      <article class="tile tile-process">
+        <h2 class="abs" style="--x:150.89;--y:947.84;--w:228.13">Un proceso a medida que te hará gritar, ¡y luego sonreír!</h2>
+        <div class="process-photo">
+          <img class="abs process-dots" style="--x:119.75;--y:1108.31;--w:290.4;--h:287.41" src="img/dots.webp" alt="">
+          <span class="abs process-fade" style="--x:119.75;--y:1077.9;--w:290.4;--h:132.3"></span>
+          <img class="abs process-artist" style="--x:162.86;--y:1117.29;--w:204.78;--h:278.43" src="img/tatoo-artist.webp" alt="Tatuador del estudio con los brazos cruzados">
         </div>
+      </article>
 
-        <div class="tile-col">
-          <article class="tile tile-photo">
-            <img src="img/man-doing-tattoo.png" alt="Tatuador trabajando" onerror="this.remove()">
-          </article>
-          <article class="tile tile-dark tile-rated">
-            <h2>El estudio de tatuajes mejor valorado de la ciudad.</h2>
-            <p>No lo dudes. ¡Nadie se ha arrepentido nunca de sus tatuajes! Escríbenos y te ayudamos.</p>
-            <a href="#contacto" class="btn">Contacta ahora</a>
-          </article>
+      <article class="abs tile tile-cream" style="--x:429.34;--y:916.71;--w:290.4;--h:194">
+        <img class="abs-in" style="--x:86.19;--y:25.74;--w:117.96;--h:143.1" src="img/gorilla.svg" alt="Diseño de gorila con sombrero y puro">
+        <p class="price"><sup>€</sup> 2800.00</p>
+      </article>
+
+      <article class="abs tile tile-cream" style="--x:429.34;--y:1175.37;--w:290.4;--h:220.35">
+        <img class="abs-in" style="--x:85;--y:18.57;--w:120.35;--h:183.22" src="img/skull.svg" alt="Diseño de calavera" onerror="this.remove()">
+        <p class="price"><sup>€</sup> 1500.00</p>
+      </article>
+
+      <article class="tile tile-rated">
+        <div class="abs tile-photo" style="--x:739.47;--y:916.71;--w:290.4;--h:193.95">
+          <img src="img/man-doing-tattoo.jpg" alt="Tatuador trabajando en un brazo" width="900" height="600">
         </div>
-      </div>
+        <h2 class="abs" style="--x:770.6;--y:1141.84;--w:228.13">El estudio de tatuajes mejor valorado.</h2>
+        <p class="abs" style="--x:770.6;--y:1271.18;--w:228.13">No lo dudes. ¡Nadie se ha arrepentido nunca de sus tatuajes! Escríbenos y te ayudamos.</p>
+        <a href="#contacto" class="abs btn" style="--x:770.6;--y:1317.88">Contacta ahora</a>
+      </article>
     </section>
 
     <!-- Testimonials -->
     <section id="opiniones" class="testimonials">
-      <div class="container">
-        <h2 class="section-title">¿Qué dicen los clientes?!</h2>
-        <div class="avatars" aria-hidden="true">
-          <span class="avatar sm a1"></span>
-          <span class="avatar md a2"></span>
-          <span class="avatar lg a3"></span>
-          <span class="avatar md a4"></span>
-          <span class="avatar sm a5"></span>
-        </div>
-        <div class="quote-wrap">
-          <button class="quote-nav prev" aria-label="Opinión anterior"><svg><use href="#i-arrow"/></svg></button>
-          <blockquote class="quote">
-            <cite>Carolina Stones</cite>
-            <p>Hace poco tuve el placer de tatuarme en Mestre y no podría estar más contenta con toda la experiencia. De principio a fin, todo en este estudio superó mis expectativas.</p>
-          </blockquote>
-          <button class="quote-nav next" aria-label="Opinión siguiente"><svg><use href="#i-arrow"/></svg></button>
-        </div>
+      <h2 class="abs section-title" style="--x:0;--y:1491.52;--w:1149.63">¿Qué dicen los clientes?!</h2>
+      <div class="avatars" aria-hidden="true">
+        <img class="abs avatar" style="--x:321.57;--y:1598.7;--w:79.04;--h:79.04" src="img/avatar-2.webp" alt="">
+        <img class="abs avatar" style="--x:414.99;--y:1598.7;--w:79.04;--h:79.04" src="img/avatar-3.webp" alt="">
+        <img class="abs avatar lg" style="--x:508.52;--y:1571.76;--w:132.93;--h:132.93" src="img/avatar-center.webp" alt="">
+        <img class="abs avatar" style="--x:655.63;--y:1598.7;--w:79.04;--h:79.04" src="img/avatar-4.webp" alt="">
+        <img class="abs avatar" style="--x:749.05;--y:1598.7;--w:79.04;--h:79.04" src="img/avatar-5.webp" alt="">
       </div>
+      <button class="abs quote-nav prev" style="--x:195.8;--y:1692.11;--w:47.9;--h:47.9" aria-label="Opinión anterior"><img src="img/arrow-prev.svg" alt=""></button>
+      <blockquote class="abs quote" style="--x:274.83;--y:1723.84;--w:599.96;--h:136.52">
+        <cite>Carolina Stones</cite>
+        <p>Hace poco tuve el placer de tatuarme en Mestre y no podría estar más contenta con toda la experiencia. De principio a fin, todo en este estudio superó mis expectativas.</p>
+      </blockquote>
+      <button class="abs quote-nav next" style="--x:905.74;--y:1692.11;--w:47.9;--h:47.9" aria-label="Opinión siguiente"><img src="img/arrow-next.svg" alt=""></button>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="faq">
-      <div class="container faq-inner">
-        <h2 class="section-title">F.A.Q.</h2>
-        <details>
-          <summary>¿Cómo es el proceso?<svg><use href="#i-plus"/></svg></summary>
-          <p>Nos cuentas tu idea, preparamos un boceto personalizado, lo ajustamos contigo y reservamos la sesión. Después te damos las pautas de cuidado.</p>
-        </details>
-        <details open>
-          <summary>¿Cómo calculáis el precio?<svg><use href="#i-plus"/></svg></summary>
-          <ol>
-            <li><b>Tamaño:</b> el precio suele depender del tamaño. Los tatuajes grandes cuestan más que los pequeños.</li>
-            <li><b>Complejidad:</b> los diseños más detallados requieren más tiempo y técnica, por lo que tienen un coste mayor.</li>
-            <li><b>Color:</b> los tatuajes a color suelen costar más que los de negro y gris, porque requieren más trabajo.</li>
-          </ol>
-        </details>
-        <details>
-          <summary>¿Podéis dibujar cualquier tatuaje?<svg><use href="#i-plus"/></svg></summary>
-          <p>Sí. Trabajamos todos los estilos: realismo, blackwork, fine line, tradicional y más.</p>
-        </details>
-        <details>
-          <summary>¿Dónde estáis?<svg><use href="#i-plus"/></svg></summary>
-          <p>Calle Mayor 12, Madrid. Abrimos de lunes a domingo.</p>
-        </details>
-      </div>
+    <section id="faq" class="abs faq" style="--x:274.83;--y:1956.16;--w:599.96">
+      <h2 class="section-title">F.A.Q.</h2>
+      <details>
+        <summary>¿Cómo es el proceso?</summary>
+        <p>Nos cuentas tu idea, preparamos un boceto personalizado, lo ajustamos contigo y reservamos la sesión. Después te damos las pautas de cuidado.</p>
+      </details>
+      <details open>
+        <summary>¿Cómo calculáis el precio?</summary>
+        <ol>
+          <li><b>Tamaño:</b> el precio suele depender del tamaño del tatuaje. Los grandes cuestan más que los pequeños, y algunos estudios cobran por centímetro o tienen precios fijos por categoría.</li>
+          <li><b>Complejidad:</b> la complejidad del diseño influye mucho. Los diseños más detallados requieren más tiempo y técnica, por lo que tienen un coste mayor.</li>
+          <li><b>Color:</b> los tatuajes a color suelen costar más que los de negro y gris. Los colores vivos requieren más trabajo para conseguir el resultado.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>¿Podéis dibujar cualquier tatuaje?</summary>
+        <p>Sí. Trabajamos todos los estilos: realismo, blackwork, fine line, tradicional y más.</p>
+      </details>
+      <details>
+        <summary>¿Dónde estáis?</summary>
+        <p>Calle Mayor 12, Madrid. Abrimos de lunes a domingo.</p>
+      </details>
     </section>
-  </main>
 
-  <!-- Newsletter + footer -->
-  <footer id="contacto" class="site-footer">
-    <div class="container">
-      <div class="newsletter">
-        <svg class="dia"><use href="#i-diamond"/></svg>
-        <div class="newsletter-box">
-          <img class="newsletter-art" src="img/newsletter.svg" alt="" onerror="this.remove()">
-          <div>
-            <h2>Suscríbete a nuestra newsletter</h2>
-            <form class="newsletter-form">
-              <input type="email" name="email" placeholder="Tu email..." aria-label="Email" required>
-              <button type="submit" class="btn">Suscribirme</button>
-            </form>
-            <p class="form-note" aria-live="polite"></p>
-          </div>
-        </div>
-        <svg class="dia"><use href="#i-diamond"/></svg>
+    <!-- Newsletter + footer -->
+    <footer id="contacto" class="site-footer">
+      <span class="abs footer-bg" style="--x:0;--y:2574.09;--w:1149.63;--h:332.91"></span>
+      <img class="abs dia-lg" style="--x:228.13;--y:2562.71;--w:19.76;--h:19.76" src="img/diamond.svg" alt="">
+      <div class="abs newsletter" style="--x:252.72;--y:2463.91;--w:639.18;--h:217.95">
+        <img class="newsletter-bg" src="img/newsletter-bg.svg" alt="">
+        <img class="abs-in newsletter-art" style="--x:70.1;--y:41.92;--w:165.96;--h:134.12" src="img/newsletter.svg" alt="" onerror="this.remove()">
+        <h2 class="abs-in" style="--x:274.14;--y:41.92;--w:200.59">Suscríbete a la newsletter</h2>
+        <form class="abs-in newsletter-form" style="--x:274.2;--y:137.72">
+          <input type="email" id="newsletter-email" name="email" placeholder="Tu email..." aria-label="Email" required>
+          <button type="submit" class="btn">Suscribirme</button>
+        </form>
+        <p class="abs-in form-note" style="--x:274.2;--y:182" aria-live="polite"></p>
       </div>
+      <img class="abs dia-lg" style="--x:897.04;--y:2562.71;--w:19.76;--h:19.76" src="img/diamond.svg" alt="">
 
-      <div class="footer-top">
-        <svg class="footer-logo"><use href="#i-star"/></svg>
-        <div class="footer-links">
-          <nav><a href="#inicio">Inicio</a><a href="#estudio">Portfolio</a><a href="#opiniones">Nosotros</a></nav>
-          <nav><a href="#contacto">Contacto</a><a href="#estudio">Precios</a><a href="#faq">FAQ</a></nav>
-        </div>
-        <div class="social">
-          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><path fill="#1e1c17" d="M18 8.5c-.5.2-1 .4-1.5.4.6-.3 1-.9 1.2-1.5-.5.3-1.1.5-1.7.7a2.7 2.7 0 0 0-4.6 2.4 7.6 7.6 0 0 1-5.5-2.8 2.7 2.7 0 0 0 .8 3.6c-.4 0-.9-.1-1.2-.3 0 1.3.9 2.4 2.1 2.6-.4.1-.8.1-1.2 0a2.7 2.7 0 0 0 2.5 1.9A5.4 5.4 0 0 1 5 16.6a7.6 7.6 0 0 0 11.7-6.8c.5-.4 1-.8 1.3-1.3Z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.5" fill="#1e1c17"/><circle cx="12" cy="12" r="2.8"/><circle cx="17.5" cy="6.5" r="1.3" fill="#1e1c17"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="5"/><path fill="#1e1c17" d="m10 8.5 6 3.5-6 3.5Z"/></svg></a>
-        </div>
+      <img class="abs footer-logo" style="--x:119.75;--y:2741.14;--w:41.91;--h:41.91" src="img/star-logo.svg" alt="">
+      <nav class="abs footer-col" style="--x:341.3;--y:2720.19;--h:83.83">
+        <a href="#inicio">Inicio</a><a href="#estudio">Portfolio</a><a href="#opiniones">Nosotros</a>
+      </nav>
+      <nav class="abs footer-col" style="--x:541.92;--y:2720.19;--h:83.83">
+        <a href="#contacto">Contacto</a><a href="#estudio">Precios</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="abs social" style="--x:934.1;--y:2752.52">
+        <a href="#" aria-label="YouTube"><img src="img/youtube.svg" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="img/twitter.svg" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="img/instagram.svg" alt=""></a>
       </div>
-      <div class="footer-bottom">
+      <div class="abs footer-bottom" style="--x:119.75;--y:2842.33;--w:910.12">
         <a href="#">Términos y condiciones</a>
         <a href="#">Política de privacidad</a>
         <p>© <span id="year"></span> Mestre Tattoo Studio. Todos los derechos reservados.</p>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
