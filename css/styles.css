@@ -261,6 +261,11 @@ h1, h2, .price, .hero-card strong, .quote cite {
 .avatar.lg { padding: calc(2.45 * var(--u)); }
 .avatar:not(.lg) { padding: calc(2.44 * var(--u)); }
 .quote-nav.prev img { transform: rotate(180deg); }
+.avatar { cursor: pointer; transition: transform .2s; }
+.avatar:not(.lg):hover { transform: scale(1.08); }
+.avatar.lg { cursor: default; }
+.quote cite, .quote p { transition: opacity .18s; }
+.quote.is-changing cite, .quote.is-changing p { opacity: 0; }
 .quote-nav { background: none; border: 0; cursor: pointer; transition: transform .2s; }
 .quote-nav img { width: 100%; height: 100%; }
 .quote-nav:hover { transform: scale(1.06); }
