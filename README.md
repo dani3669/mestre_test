@@ -29,3 +29,7 @@ python3 -m http.server 8000
 En escritorio cada elemento se coloca con las coordenadas del frame del Figma
 (`--x`, `--y`, `--w`, `--h` en `index.html`), escaladas con `--u`, así que la página
 coincide con el mockup a cualquier ancho. Por debajo de 900px pasa a un diseño apilado.
+
+La página tiene dos "escenarios" del Figma (`.page` y `.page-2`, cuyas `--y` empiezan en 0)
+y entre ellos las secciones de texto (`.story`: ¿Te suena esto?, el curso por semanas y
+¿Es para ti?), que van en flujo normal y crecen con su contenido.
