@@ -113,7 +113,7 @@ h1, h2, .price, .hero-card strong, .quote cite {
 .hero-title {
   font-size: calc(67.06 * var(--u));
   letter-spacing: calc(-1.34 * var(--u));
-  line-height: 1.05;
+  line-height: .9;
 }
 .btn-book { display: flex; align-items: center; gap: calc(4.4 * var(--u)); }
 .btn-book .dia { width: calc(8.98 * var(--u)); height: calc(8.98 * var(--u)); padding: calc(.5 * var(--u)); }
