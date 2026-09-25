@@ -1,6 +1,6 @@
 # Mestre Tattoo Studio
 
-Landing page estática (HTML + CSS + JS) para un estudio de tatuajes, basada en el mockup
+Landing page estática (HTML + CSS + JS) para una academia de tatuaje, basada en el mockup
 [Tattoo Salon Landing Page UI (Figma)](https://www.figma.com/design/jw1jRTr1sVOnV7SyjjXeaE/Tatoo-Salon-Landing-Page-UI-FREEBIE--Community-?node-id=13-2998).
 
 ## Ver en local
