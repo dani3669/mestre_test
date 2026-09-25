@@ -17,11 +17,15 @@ python3 -m http.server 8000
 - `css/styles.css`: estilos y colores (variables en `:root`)
 - `js/main.js`: menú móvil, carrusel de opiniones y newsletter
 
-## Imágenes pendientes
+## Imágenes y fuentes
 
-Las fotos e ilustraciones del Figma van en `img/` con estos nombres (si faltan, la página
-se ve igual pero sin ellas): `girl.png` (portada), `tatoo-artist.png`, `gorilla.svg`,
-`skull.svg`, `man-doing-tattoo.png`, `newsletter.svg`.
+- `img/`: fotos, ilustraciones e iconos exportados del Figma (optimizados a WebP/JPG).
+- `figma-assets/`: exportaciones originales del Figma, como referencia; no las usa la web.
+- `fonts/grenze-gotisch.woff2`: sustituye a *Angel Rhapsody* (la fuente del mockup, que no es libre).
+  El texto usa Satoshi desde Fontshare.
 
-Tipografías: UnifrakturCook (incluida en `fonts/`) sustituye a *Angel Rhapsody*, que no es
-libre; el texto usa Satoshi desde Fontshare.
+## Cómo está maquetada
+
+En escritorio cada elemento se coloca con las coordenadas del frame del Figma
+(`--x`, `--y`, `--w`, `--h` en `index.html`), escaladas con `--u`, así que la página
+coincide con el mockup a cualquier ancho. Por debajo de 900px pasa a un diseño apilado.
