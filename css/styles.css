@@ -31,7 +31,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   font-weight: 500;
-  background: var(--bg) url("../img/bg-texture.webp") center top / min(100vw, 1440px) auto repeat-y;
+  background: var(--bg) url("../img/bg-texture.webp") center top / max(100vw, 1150px) auto repeat-y;
   color: var(--cream);
   overflow-x: hidden;
 }
@@ -171,6 +171,9 @@ h1, h2, .price, .hero-card strong, .quote cite {
 }
 .hero-card strong { font-size: calc(19.16 * var(--u)); font-weight: 600; letter-spacing: calc(.4 * var(--u)); white-space: nowrap; line-height: 1; }
 .hero-card sup, .price sup { font-size: .75em; vertical-align: baseline; }
+
+/* Full-bleed bands: span the whole window, not just the centred stage */
+.logos, .footer-bg { left: calc(50% - 50vw); width: 100vw; }
 
 /* Logos */
 .logos {
